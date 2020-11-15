@@ -78,3 +78,45 @@ list.addEventListener('click',function(e){
         list.removeChild(li);
       }
 });
+
+
+const addForm = document.forms['add-book'];
+
+addForm.addEventListener('submit',function(e){
+  e.preventDefault();
+  //if(e.target.class)
+// e.querySelector('') kulalndik asagida, formu butun olarak ele aliyorz demedik mi ?
+  const val = addForm.querySelector('input[type="text"]').value;
+  //createElement
+  const li =document.createElement('li');
+  const name =document.createElement('span');
+  const dlt =document.createElement('span');
+
+  //add textContent
+  name.textContent = val;
+  dlt.textContent = 'delete';
+
+  name.classList.add('name');
+  dlt.classList.add('delete');
+
+  //nested
+
+  li.appendChild(name);
+  li.appendChild(dlt);
+  list.appendChild(li);
+});
+
+var book = document.querySelector('#book-list li:nth-child(2) .name');
+
+console.log(book.hasAttribute('class'));
+console.log(book.getAttribute('class'));
+console.log(book.setAttribute('class','surname'));
+console.log(book.getAttribute('class'));
+console.log(book.setAttribute('class','name'));
+console.log(book.getAttribute('class'));
+console.log(book.hasAttribute('href'));
+
+console.log(book.removeAttribute('class'));
+console.log(book.getAttribute('class'));
+book.setAttribute('class','name');
+console.log(book.getAttribute('class'));
