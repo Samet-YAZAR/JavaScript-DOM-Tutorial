@@ -51,7 +51,7 @@ console.log('#wrappers parent node is a',books.previousSibling);
 console.log('#wrappers parent node is a',books.previousElementSibling);
 
 books.previousElementSibling.querySelector('h1').innerHTML += '<br> What a good page dude ;)';
-*/
+
 
 var dlt = document.querySelectorAll('#book-list .delete');
 dlt.forEach((function(btn) {
@@ -67,3 +67,14 @@ ggl.addEventListener('click',function(e){
     e.preventDefault();
     console.log(e.target.textContent,'was prevented');
 })
+*/
+
+const list = document.querySelector('#book-list ul');
+
+list.addEventListener('click',function(e){
+
+      if(e.target.className == 'delete'){
+        const li = e.target.parentElement;
+        list.removeChild(li);
+      }
+});
