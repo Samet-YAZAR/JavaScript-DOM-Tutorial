@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded',function(){
 /*
 var titles = document.getElementsByClassName('title');
 
@@ -165,3 +165,5 @@ tabs.addEventListener('click', (e)=> {//for any e
  }
 });
 //tiklanilan tagi al, paneller arasinda dolas, tiklanan tagin class ismine active ekle, digerlerinden remove et.
+
+});
