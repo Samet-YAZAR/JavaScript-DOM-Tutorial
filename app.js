@@ -141,7 +141,7 @@ searchBar.addEventListener('keyup',function(book){
     //inputlar uzerinde dolasyoruz. Ondan dolayi value almamiz gerekiyr.
     const books = list.getElementsByTagName('li');
     Array.from(books).forEach(function(book) {
-        const title = book.firstElementChild.textContent;
+        const title = book.firstElementChild.textContent;//li altindaki ilk attribute oldugudnan .
         if(title.toLowerCase().indexOf(term)!= -1) {
           book.style.display = 'block';
         } else {
