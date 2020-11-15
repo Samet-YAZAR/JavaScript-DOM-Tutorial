@@ -129,3 +129,26 @@ chckBox.addEventListener('change',function(){
       list.style.display= 'block';
     }
 });
+
+// const term = document.querySelector('#search-books input[type="text"]').value;
+// console.log(term);
+
+//bunun bir form oldugunu unutup, ustteki gibi yazmaya calstik.
+
+const searchBar = document.forms['search-books'].querySelector('input');
+searchBar.addEventListener('keyup',function(book){
+    const term= book.target.value.toLowerCase();
+    //inputlar uzerinde dolasyoruz. Ondan dolayi value almamiz gerekiyr.
+    const books = list.getElementsByTagName('li');
+    Array.from(books).forEach(function(book) {
+        const title = book.firstElementChild.textContent;
+        if(title.toLowerCase().indexOf(term)!= -1) {
+          book.style.display = 'block';
+        } else {
+          book.style.display = 'none';
+        }
+    });
+
+
+
+});
