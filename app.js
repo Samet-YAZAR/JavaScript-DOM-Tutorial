@@ -67,6 +67,20 @@ ggl.addEventListener('click',function(e){
     e.preventDefault();
     console.log(e.target.textContent,'was prevented');
 })
+
+var book = document.querySelector('#book-list li:nth-child(2) .name');
+
+console.log(book.hasAttribute('class'));
+console.log(book.getAttribute('class'));
+console.log(book.setAttribute('class','surname'));
+console.log(book.getAttribute('class'));
+console.log(book.setAttribute('class','name'));
+console.log(book.getAttribute('class'));
+console.log(book.hasAttribute('href'));
+console.log(book.removeAttribute('class'));
+console.log(book.getAttribute('class'));
+book.setAttribute('class','name');
+console.log(book.getAttribute('class'));
 */
 
 const list = document.querySelector('#book-list ul');
@@ -106,17 +120,12 @@ addForm.addEventListener('submit',function(e){
   list.appendChild(li);
 });
 
-var book = document.querySelector('#book-list li:nth-child(2) .name');
+const chckBox = document.querySelector('#hide');
 
-console.log(book.hasAttribute('class'));
-console.log(book.getAttribute('class'));
-console.log(book.setAttribute('class','surname'));
-console.log(book.getAttribute('class'));
-console.log(book.setAttribute('class','name'));
-console.log(book.getAttribute('class'));
-console.log(book.hasAttribute('href'));
-
-console.log(book.removeAttribute('class'));
-console.log(book.getAttribute('class'));
-book.setAttribute('class','name');
-console.log(book.getAttribute('class'));
+chckBox.addEventListener('change',function(){
+    if(chckBox.checked){
+      list.style.display= "none";
+    }else {
+      list.style.display= 'block';
+    }
+});
