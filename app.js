@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',function(){
-/*
+
 var titles = document.getElementsByClassName('title');
 
 
@@ -81,7 +81,6 @@ console.log(book.removeAttribute('class'));
 console.log(book.getAttribute('class'));
 book.setAttribute('class','name');
 console.log(book.getAttribute('class'));
-*/
 
 const list = document.querySelector('#book-list ul');
 
